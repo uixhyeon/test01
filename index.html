@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메리션 전환 효과</title>
+    <style>
+div{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid red;
+/* animation-name: bg_change;
+animation-duration: 5s;
+animation-delay: 2s;
+animation-fill-mode: both;
+animation-iteration-count: 2;
+animation-direction: reverse; */
+animation: bg_change 5s linear 5;
+}
+@keyframes bg_change{
+    0%{
+        background-color: red;
+    right: 0;
+    }
+    25%{
+        background-color: orange;
+    right: 100px;
+}
+    50%{
+        background-color: green;
+    right: 200px;
+}
+    100%{
+        background-color: yellow;
+    right: 0;
+}
+
+}
+
+
+
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
