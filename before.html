@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소 선택자</title>
+    <style>
+      p {
+        background-color: aquamarine;
+      }
+
+      .box {
+        background-color: red;
+      }
+      .box::before {
+        content: "⚾⚾";
+        display: block;
+      }
+      .box::after {
+        content: "⚾⚾";
+        display: block;
+      }
+.box2{
+    background-color: chocolate;
+}
+.box2::before{
+    content: "<before>";
+    color:crimson ;
+    display: block;
+    background-color: beige;
+}
+.box2::after{
+    content: "icon";
+color: crimson;
+background-color: beige;
+}
+    </style>
+  </head>
+  <body>
+    <span>⚾⚾</span>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni maxime
+      possimus neque repudiandae omnis et at ad totam quasi, sit fugit, qui
+      dolor quod recusandae incidunt sed a id placeat.
+    </p>
+    <span>⚾⚾</span>
+    <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <p class="box2">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id non maxime
+      adipisci sapiente odit molestias ducimus, atque itaque, praesentium dicta
+      ipsum, magni earum nobis. Mollitia nostrum explicabo dolorum libero
+      dolorem!
+    </p>
+  </body>
+</html>

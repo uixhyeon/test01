@@ -1,0 +1,100 @@
+@charset "utf-8"
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 버튼예시 */
+.btn-download::before {
+  content: "🎗🎞";
+  color: #5e5e5e;
+  margin-right: 10px;
+}
+.btn-download {
+  padding: 10px 20px;
+  background-color: rgb(235, 235, 235);
+  color: rgb(140, 142, 200);
+  border: none;
+  border-radius: 5px;
+}
+.btn-download::after {
+  content: "🎪";
+  opacity: 0.7;
+  margin-left: 10px;
+}
+.tooltip {
+  position: relative;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #5e5e5e;
+  padding: 10px;
+  color: #fff;
+}
+.tooltip::after {
+  border: 5px solid transparent;
+  /* transparent 투명색 으로 바꾸기 */
+
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 80px;
+  border-top-color: #5e5e5e;
+}
+/* 5씩해서 10 10이 만들어짐 */
+/* 내용을 안적어야~~ */
+p {
+  display: inline-block;
+  /* 디스플레이를 걸어야 블럭이댐 */
+  /* 위에써는 포지션을 해서 괜찮은가봄! */
+  border: 5px solid #333;
+}
+.divider {
+  position: relative;
+  text-align: center;
+  background-color: cornsilk;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  width: 20%;
+  display: inline-block;
+  height: 1px;
+  background-color: #ccc;
+  vertical-align: middle;
+}
+.divider::before {
+  margin-right: 10px;
+}
+.divider::after {
+  margin-left: 10px;
+}
+/* 메뉴 구분선 ㅣ */
+.menu {
+  background-color: lavender;
+  display: flex;
+  gap: 20px;
+}
+.menu a {
+  color: #333;
+  padding: 0 10px;
+  text-decoration: none;
+  position: relative;
+  background-color: aquamarine;
+}
+.menu a::after {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  right: 0;
+  display: inline-block;
+  /* 이건 앱솔이랑 같이 먹히지 않음 
+  margin-left: 10px; */
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #333;
+}
+.menu a:last-child::after {
+  content: none;
+}
